@@ -1,6 +1,6 @@
 # SUNY Binghamton Course Availability Notifier
 
-A script designed to check for available seats in given courses every 30 minutes and notify the user via email. It can be run both locally and as an AWS Lambda function.
+A script designed to check for available seats in given courses every 30 minutes and notify the user via email. It can be run both locally and as an AWS Lambda function. This is designed for students who were unable to enroll in their desired courses and are on the lookout for available slots that may open up due to others dropping the course.
 
 ## Features
 
@@ -31,3 +31,10 @@ If you don't want the process to be running on your machine locally and instead 
     password = os.environ.get('GMAIL_APP_PASSWORD')
 3. Schedule the Lambda function using AWS Event Bridge to run at your preferred interval.
 4. Change other variables(stream, level, term etc..) in the script accordingly
+
+
+## Doubts?
+
+Feel free to reach out to me for any modifications or help needed in setting up.
+https://www.linkedin.com/in/nisaanth-natarajan/
+nisaanthofficial@gmail.com
