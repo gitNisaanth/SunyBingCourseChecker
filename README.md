@@ -36,5 +36,5 @@ If you don't want the process to be running on your machine locally and instead 
 ## Doubts?
 
 Feel free to reach out to me for any modifications or help needed in setting up.
-https://www.linkedin.com/in/nisaanth-natarajan/
-nisaanthofficial@gmail.com
+- https://www.linkedin.com/in/nisaanth-natarajan/
+- nisaanthofficial@gmail.com
