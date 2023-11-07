@@ -6,7 +6,7 @@ from email.mime.multipart import MIMEMultipart
 
 stream = 'CS' #Branch
 level = 'GD' #Change based on Graduate/Undergraduate
-term = '202420' #Change based on the semester you are trying to register(Check the network payload of the student registration portal for this value)
+term = '202420' #Change based on the semester you are trying to register
 interested_titles = [
     "Design Patterns", 
     "Introduction To Data Mining", 
