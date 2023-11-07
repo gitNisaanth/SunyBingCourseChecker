@@ -11,13 +11,13 @@ A script designed to check for available seats in given courses every 30 minutes
 ## Local Usage
 
 Edit the LocalScript.py with the following parameters:
-stream: Your branch (e.g., 'CS' for Computer Science).
-level: Based on your status (Graduate 'GD' or Undergraduate).
-term: The semester code you are trying to register for.
-interested_titles: List of courses you are interested in.
-sender_email: The sender's email address.
-receiver_email: The receiver's email addresses, separated by commas.
-password: The sender's Gmail app password.
+- stream: Your branch (e.g., 'CS' for Computer Science).
+- level: Based on your status (Graduate 'GD' or Undergraduate).
+- term: The semester code you are trying to register for.
+- interested_titles: List of courses you are interested in.
+- sender_email: The sender's email address.
+- receiver_email: The receiver's email addresses, separated by commas.
+- password: The sender's Gmail app password.
 
 Run the Script: python3 LocalScript.py
 
