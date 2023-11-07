@@ -4,9 +4,18 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-sender_email = "sender@gmail.com"
-receiver_email = "reciever1@gmail.com, reciever2@gmail.com"
-password = "<GMAIL_APP_PASSWORD>"
+stream = 'CS' #Branch
+level = 'GD' #Change based on Graduate/Undergraduate
+term = '202420' #Change based on the semester you are trying to register(Check the network payload of the student registration portal for this value)
+interested_titles = [
+    "Design Patterns", 
+    "Introduction To Data Mining", 
+    "SW & Engineering Project Mgmt", 
+    "Intro to Computer Security"
+]
+sender_email = "sender@gmail.com" #Set the sender email
+receiver_email = "reciever1@gmail.com, reciever2@gmail.com" #Set the recievers emails as comma separated values
+password = "GMAIL_APP_PASSWORD" #Put the sender's gmail app password for email authentication
 
 def send_email(subject, body):
     message = MIMEMultipart()
@@ -29,7 +38,7 @@ def check_course_availability():
     post_url = 'https://ssb.cc.binghamton.edu:8484/StudentRegistrationSsb/ssb/term/search?mode=search'
     
     form_data = {
-        'term': '202420',
+        'term': term,
         'studyPath': '',
         'studyPathText': '',
         'startDatepicker': '',
@@ -46,9 +55,9 @@ def check_course_availability():
 
     final_url = 'https://ssb.cc.binghamton.edu:8484/StudentRegistrationSsb/ssb/searchResults/searchResults'
     params = {
-        'txt_subject': 'CS',
-        'txt_level': 'GD',
-        'txt_term': '202420',
+        'txt_subject': stream,
+        'txt_level': level,
+        'txt_term': term,
         'startDatepicker': '',
         'endDatepicker': '',
         'uniqueSessionId': '591qn1699290752799',
@@ -62,12 +71,6 @@ def check_course_availability():
 
     if final_response.status_code == 200:
         courses_data = final_response.json()
-        interested_titles = [
-            "Design Patterns", 
-            "Introduction To Data Mining", 
-            "SW & Engineering Project Mgmt", 
-            "Intro to Computer Security"
-        ]
 
         available_courses = []
         for course in courses_data.get('data', []):
